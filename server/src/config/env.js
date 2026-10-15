@@ -34,6 +34,7 @@ export const env = Object.freeze({
   mongoUri: required("MONGODB_URI"),
   jwtSecret,
   jwtExpiresIn: "1d",
+   SAMESITE: process.env.SAMESITE?.trim().toLowerCase() || "none",
   clientUrl: process.env.CLIENT_URL || "http://localhost:5173",
   cookieSecure: nodeEnv === "production",
   ifsc: process.env.BANK_IFSC || "SIMB0000001",
