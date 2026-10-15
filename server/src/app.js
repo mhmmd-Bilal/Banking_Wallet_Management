@@ -14,7 +14,7 @@ import adminRoutes from './routes/adminRoutes.js';
 
 export function createApp() {
   const app = express();
-  if (env.trustProxy) app.set('trust proxy', 1);
+  if (env.trustProxy) app.set('trust proxy', env.trustProxy);
   app.disable('x-powered-by');
 
   app.use(helmet());
